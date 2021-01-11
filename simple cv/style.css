@@ -32,7 +32,7 @@ body {
 }
 
 .left-header {
-    width: 50px;
+    width: 55px;
     height: auto;
     float: left;
     
@@ -51,7 +51,7 @@ body {
 }
 
 .photo {
-    width: 190px;
+    width: 180px;
     position: relative;
     float: left;
 
@@ -226,14 +226,58 @@ span {
 
 .on {
     background-color: rgb(1, 0, 58);
-    width: 8px;
-    height: 8px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
 }
 
 .off {
     background-color: rgb(168, 168, 168);
-    width: 8px;
-    height: 8px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
+}
+
+#inputUser {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: auto auto auto;
+    grid-row-gap: 15px;
+}
+
+.inputUserLabel {
+    grid-area: 1/1/2/4;
+    margin: 8px;
+}
+
+.inputUserForm {
+    grid-area: 2/2/3/3;
+}
+
+td {
+    padding: 8px;
+}
+
+.inputArea {
+    width: 500px;
+    height: 30px;
+}
+
+textarea.inputArea {
+    height: 55px;
+}
+
+.submit {
+    padding: 8px;
+}
+
+.userNavigation {
+    
+}
+
+.footer {
+    background-color: #031547; 
+    height: 30px; 
+    margin-top: 30px;
+    grid-area: 3/1/4/4;
 }

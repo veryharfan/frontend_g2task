@@ -3,6 +3,7 @@
 <head>
     <title>CV</title>
     <link rel="stylesheet" href="./style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="blank-side"></div>
@@ -49,17 +50,22 @@
                 <div class="sub-title">
                     Name
                 </div>
-                <div class="val">Very Harfan</div>
+                <div class="val namevalue">Very Harfan</div>
                 <div class="sub-title">DATE OF BIRTH</div>
-                <div class="val">14 February 1995</div>
+                <div class="val dobvalue">14 February 1995</div>
                 <div class="sub-title">ADDRESS</div>
-                <div class="val">Jl. Kota Bambu Utara II 
-                    <br>Kota Bambu Utara
-                    <br>Palmerah Jakarta Barat
+                <div class="val addressvalue">Jl. Kota Bambu Utara II<br>Kota Bambu Utara<br>Palmerah Jakarta Barat
                 </div>
                 <div class="sub-title">WEBSITE</div>
-                <div class="val">facebook.com/veryharfan</div>
-
+                <div class="val">--</div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr;">
+                    <div style="justify-self: left;">
+                        <input type="button" value="<<Previous" class="userNavigation previous" onclick="changeUser(-1)" hidden>
+                    </div>
+                    <div style="justify-self: right;">
+                        <input type="button" value="Next>>" class="userNavigation next" onclick="changeUser(1)" hidden>
+                    </div>
+                </div>
                 <div class="profile-title">
                     AWARDS
                 </div>
@@ -228,13 +234,13 @@
                                     <div class="prog-skill">
                                         Java
                                     </div>
-                                    <div class="indikator">
-                                        <div class="on"></div>
-                                        <div class="on"></div>
-                                        <div class="on"></div>
-                                        <div class="off"></div>
-                                        <div class="off"></div>
-                                        <div class="off"></div>
+                                    <div class="indikator java">
+                                        <div class="off" name="java" onclick="light(1, 'java')"></div>
+                                        <div class="off" name="java" onclick="light(2, 'java')"></div>
+                                        <div class="off" name="java" onclick="light(3, 'java')"></div>
+                                        <div class="off" name="java" onclick="light(4, 'java')"></div>
+                                        <div class="off" name="java" onclick="light(5, 'java')"></div>
+                                        <div class="off" name="java" onclick="light(6, 'java')"></div>
                                     </div>
                                 </div>
                                 <div class="sk-in">
@@ -242,12 +248,12 @@
                                         HTML
                                     </div>
                                     <div class="indikator">
-                                        <div class="on"></div>
-                                        <div class="on"></div>
-                                        <div class="off"></div>
-                                        <div class="off"></div>
-                                        <div class="off"></div>
-                                        <div class="off"></div>
+                                        <div class="off" name="html" onclick="light(1, 'html')"></div>
+                                        <div class="off" name="html" onclick="light(2, 'html')"></div>
+                                        <div class="off" name="html" onclick="light(3, 'html')"></div>
+                                        <div class="off" name="html" onclick="light(4, 'html')"></div>
+                                        <div class="off" name="html" onclick="light(5, 'html')"></div>
+                                        <div class="off" name="html" onclick="light(6, 'html')"></div>
                                     </div>
                                 </div>
 
@@ -256,12 +262,12 @@
                                         CSS
                                     </div>
                                     <div class="indikator">
-                                        <div class="on"></div>
-                                        <div class="on"></div>
-                                        <div class="off"></div>
-                                        <div class="off"></div>
-                                        <div class="off"></div>
-                                        <div class="off"></div>
+                                        <div class="off" name="css" onclick="light(1, 'css')"></div>
+                                        <div class="off" name="css" onclick="light(2, 'css')"></div>
+                                        <div class="off" name="css" onclick="light(3, 'css')"></div>
+                                        <div class="off" name="css" onclick="light(4, 'css')"></div>
+                                        <div class="off" name="css" onclick="light(5, 'css')"></div>
+                                        <div class="off" name="css" onclick="light(6, 'css')"></div>
                                     </div>
                                 </div>
                                 <div class="sk-in">
@@ -269,12 +275,12 @@
                                         Javascript
                                     </div>
                                     <div class="indikator">
-                                        <div class="on"></div>
-                                        <div class="on"></div>
-                                        <div class="off"></div>
-                                        <div class="off"></div>
-                                        <div class="off"></div>
-                                        <div class="off"></div>
+                                        <div class="off" name="javascript" onclick="light(1, 'javascript')"></div>
+                                        <div class="off" name="javascript" onclick="light(2, 'javascript')"></div>
+                                        <div class="off" name="javascript" onclick="light(3, 'javascript')"></div>
+                                        <div class="off" name="javascript" onclick="light(4, 'javascript')"></div>
+                                        <div class="off" name="javascript" onclick="light(5, 'javascript')"></div>
+                                        <div class="off" name="javascript" onclick="light(6, 'javascript')"></div>
                                     </div>
                                 </div>
                                 <div class="sk-in">
@@ -282,12 +288,12 @@
                                         Python
                                     </div>
                                     <div class="indikator">
-                                        <div class="on"></div>
-                                        <div class="on"></div>
-                                        <div class="on"></div>
-                                        <div class="off"></div>
-                                        <div class="off"></div>
-                                        <div class="off"></div>
+                                        <div class="off" name="python" onclick="light(1, 'python')"></div>
+                                        <div class="off" name="python" onclick="light(2, 'python')"></div>
+                                        <div class="off" name="python" onclick="light(3, 'python')"></div>
+                                        <div class="off" name="python" onclick="light(4, 'python')"></div>
+                                        <div class="off" name="python" onclick="light(5, 'python')"></div>
+                                        <div class="off" name="python" onclick="light(6, 'python')"></div>
                                     </div>
                                 </div>
                                 <div class="sk-in">
@@ -295,12 +301,12 @@
                                         SQL
                                     </div>
                                     <div class="indikator">
-                                        <div class="on"></div>
-                                        <div class="on"></div>
-                                        <div class="on"></div>
-                                        <div class="off"></div>
-                                        <div class="off"></div>
-                                        <div class="off"></div>
+                                        <div class="off" name="sql" onclick="light(1, 'sql')"></div>
+                                        <div class="off" name="sql" onclick="light(2, 'sql')"></div>
+                                        <div class="off" name="sql" onclick="light(3, 'sql')"></div>
+                                        <div class="off" name="sql" onclick="light(4, 'sql')"></div>
+                                        <div class="off" name="sql" onclick="light(5, 'sql')"></div>
+                                        <div class="off" name="sql" onclick="light(6, 'sql')"></div>
                                     </div>
                                 </div>   
                             </div>
@@ -313,12 +319,12 @@
                                         Word
                                     </div>
                                     <div class="indikator">
-                                        <div class="on"></div>
-                                        <div class="on"></div>
-                                        <div class="on"></div>
-                                        <div class="on"></div>
-                                        <div class="on"></div>
-                                        <div class="off"></div>
+                                        <div class="off" name="msword" onclick="light(1, 'msword')"></div>
+                                        <div class="off" name="msword" onclick="light(2, 'msword')"></div>
+                                        <div class="off" name="msword" onclick="light(3, 'msword')"></div>
+                                        <div class="off" name="msword" onclick="light(4, 'msword')"></div>
+                                        <div class="off" name="msword" onclick="light(5, 'msword')"></div>
+                                        <div class="off" name="msword" onclick="light(6, 'msword')"></div>
                                     </div>
                                 </div>
                                 <div class="sk-in">
@@ -326,12 +332,12 @@
                                         Excel
                                     </div>
                                     <div class="indikator">
-                                        <div class="on"></div>
-                                        <div class="on"></div>
-                                        <div class="on"></div>
-                                        <div class="on"></div>
-                                        <div class="off"></div>
-                                        <div class="off"></div>
+                                        <div class="off" name="msexcel" onclick="light(1, 'msexcel')"></div>
+                                        <div class="off" name="msexcel" onclick="light(2, 'msexcel')"></div>
+                                        <div class="off" name="msexcel" onclick="light(3, 'msexcel')"></div>
+                                        <div class="off" name="msexcel" onclick="light(4, 'msexcel')"></div>
+                                        <div class="off" name="msexcel" onclick="light(5, 'msexcel')"></div>
+                                        <div class="off" name="msexcel" onclick="light(6, 'msexcel')"></div>
                                     </div>
                                 </div>
                                 <div class="sk-in">
@@ -339,12 +345,12 @@
                                         Power Point
                                     </div>
                                     <div class="indikator">
-                                        <div class="on"></div>
-                                        <div class="on"></div>
-                                        <div class="on"></div>
-                                        <div class="on"></div>
-                                        <div class="off"></div>
-                                        <div class="off"></div>
+                                        <div class="off" name="mspoint" onclick="light(1, 'mspoint')"></div>
+                                        <div class="off" name="mspoint" onclick="light(2, 'mspoint')"></div>
+                                        <div class="off" name="mspoint" onclick="light(3, 'mspoint')"></div>
+                                        <div class="off" name="mspoint" onclick="light(4, 'mspoint')"></div>
+                                        <div class="off" name="mspoint" onclick="light(5, 'mspoint')"></div>
+                                        <div class="off" name="mspoint" onclick="light(6, 'mspoint')"></div>
                                     </div>
                                 </div>
                             </div>
@@ -354,7 +360,43 @@
                 </div>
             </div>
         </div>
-        <div class="footer" style="background-color: #031547; height: 30px; margin-top: 30px;">
+        <div class="footer">
+        </div>
+        <div id="inputUser">
+            <div class="inputUserLabel">Input User</div>
+            <div class="inputUserForm" >
+                <form name="inputData" onsubmit="saveData()">
+                    <table>
+                        <tr>
+                            <td class="inputLabel">Name</td>
+                            <td>:</td>
+                            <td >
+                                <input class="inputArea" type="text" name="name" >
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="inputLabel">Date of Birth</td>
+                            <td>:</td>
+                            <td>
+                                <input class="inputArea" type="date" name="dob">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="inputLabel">Address</td>
+                            <td>:</td>
+                            <td>
+                                <textarea class="inputArea" name="address"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" align="right">
+                                <input class="submit" type="submit" value="Simpan">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <div class="footer"></div>
         </div>
     </div>
     <div class="blank-side"></div>
