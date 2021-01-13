@@ -1,0 +1,97 @@
+* {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr auto 5fr;
+    grid-template-rows: 50px auto auto 1fr;
+}
+
+.App {
+    grid-area: 2/2/3/3;
+}
+
+.receipt {
+    grid-area: 3/2/4/3;
+}
+
+.receipt-body {
+    
+    display: grid;
+    grid-template-columns: auto auto 1fr 1fr;
+    /* grid-template-rows: repeat(6, auto); */
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    margin-top: 30px;
+    border: #fb5533 1px solid;
+}
+
+.header {
+    background-color: #fb5533;
+    color: #fff;
+    margin-top: 10px;
+
+}
+
+.in, .out, .header {
+    border: #fb5533 1px solid;
+    padding: 5px;
+}
+
+tr {
+    margin: 5px;
+}
+
+.inputLabel {
+    width: 200px;
+}
+
+.input {
+    width: 250px;
+    padding: 0px;
+}
+
+.receipt-header {
+    margin: 0px;
+    grid-area: 1/1/2/5;
+}
+
+.receipt-startTime {
+    grid-area: 2/3/3/5;
+}
+
+.receipt-endTime {
+    grid-area: 3/3/4/5;
+}
+
+.receipt-type {
+    grid-area: 4/3/5/5;
+}
+
+.receipt-price {
+    grid-area: 5/3/6/5;
+}
+
+.receipt-label {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.colon {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.cancel {
+    grid-area: 6/3/7/4;
+}
+
+.proceed {
+    grid-area: 6/4/7/5;
+}
+
+button, .button {
+    width: 65px;
+    padding: 5px;
+}

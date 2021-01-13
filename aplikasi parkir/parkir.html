@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="script.js" defer></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="App">
+            <div class="header">Masuk Parkir</div>
+            <div class="in">
+                <form name="inputData" onsubmit="saveData()">
+                    <table width="100%">
+                        <tr>
+                            <td class="inputLabel">Plat Nomor Kendaraan</td>
+                            <td>:</td>
+                            <td>
+                                <input  class="input" type="text" name="id" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="inputLabel">Waktu Masuk Kendaraan</td>
+                            <td>:</td>
+                            <td>
+                                <input  class="input" type="datetime-local" name="datetime" id="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="inputLabel">Jenis Kendaraan</td>
+                            <td>:</td>
+                            <td>
+                                <input type="radio" name="type" value="motor" required>Motor
+                                <input type="radio" name="type" value="mobil" required>Mobil
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" align="right"><input class="button" type="submit" value="Masuk"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <div class="header">Keluar Parkir</div>
+            <div class="out">
+                <form name="outputData" onsubmit="exit()">
+                    <table width="100%">
+                        <tr>
+                            <td class="inputLabel">Plat Nomor Kendaraan</td>
+                            <td>:</td>
+                            <td>
+                                <input class="input" type="text" name="outUser" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" align="right"><input class="button" type="submit" value="Keluar"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+        <div class="receipt" hidden>
+            <div class="receipt-body"></div>
+        </div>
+    </body>
+</html>

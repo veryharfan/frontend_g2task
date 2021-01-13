@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<head>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loginPage">
+        <form name="loginForm" onsubmit="login()">
+            <table>
+                <tr>
+                    <td>Username</td>
+                    <td>:</td>
+                    <td><input type="text" name="usernameLogin"></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td>:</td>
+                    <td><input type="password" name="passwordLogin"></td>
+                </tr>
+                <tr>
+                    <td colspan="3" align="right">
+                        <a href="#" target="_self" style="font-size: 10px;" onclick="alert('call admin for help')">Forgot Password?</a>
+                        <input type="submit" value="Login">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div id="userPage" hidden>
+        <div id="userForm" style="display: flex; justify-content: center;">
+            <form name="inputData" onsubmit="saveData()">
+                <table>
+                    <tr>
+                        <td>Nama</td>
+                        <td>:</td>
+                        <td><input class="input-text" type="text" name="name" required></td>
+                        <td><input class="input-text" type="text" name="id" hidden></td>
+
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td>:</td>
+                        <td><input class="input-text" type="password" name="password"></td>
+                    </tr>
+                    <tr>
+                        <td>Tempat Lahir</td>
+                        <td>:</td>
+                        <td><input class="input-text" type="text" name="pob" required></td>
+                    </tr>
+                    <tr>
+                        <td>Tanggal Lahir</td>
+                        <td>:</td>
+                        <td><input class="input-text" type="date" name="dob" required></td>
+                    </tr>
+                    <tr>
+                        <td>Alamat</td>
+                        <td>:</td>
+                        <td><textarea class="input-text" name="address" required></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>Jenis Kelamin</td>
+                        <td>:</td>
+                        <td>
+                            <input type="radio" name="gender" value="Laki-Laki">Laki-Laki
+                            <input type="radio" name="gender" value="Perempuan">Perempuan
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Jabatan</td>
+                        <td>:</td>
+                        <td>
+                            <select class="input-text" name="position" >
+                                <option value="Director">Director</option>
+                                <option value="General Manager">General Manager</option>
+                                <option value="Manager">Manager</option>
+                                <option value="Supervisor">Supervisor</option>
+                                <option value="Engineer">Engineer</option>
+                                <option value="Staff">Staff</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Hobi</td>
+                        <td>:</td>
+                        <td>
+                            <input type="checkbox" name="hobby" value="Berenang">Berenang
+                            <input type="checkbox" name="hobby" value="Membaca">Membaca
+                            <input type="checkbox" name="hobby" value="Musik">Musik
+                            <input type="checkbox" name="hobby" value="Badminton">Badminton
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" align="right">
+                            <input type="submit" value="Simpan">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div style="margin-left: 15%;">
+            Search : <input type="text" name="search" onkeyup="searchData(this)">
+        </div>
+        <div style="display: flex; justify-content: center;">
+            <table class="user-table">
+                <thead>
+                    <tr>
+                        <td>No</td>
+                        <td>Nama</td>
+                        <td>Tempat Tanggal Lahir</td>
+                        <td>Jabatan</td>
+                        <td>Alamat</td>
+                        <td>Jenis Kelamin</td>
+                        <td>Hobi</td>
+                        <td class="action">Aksi</td>
+                    </tr>
+                </thead>
+                <tbody class="outputData" ></tbody>
+            </table>
+        </div>
+        <div class="pagination">
+        </div>
+    </div>
+</body>
